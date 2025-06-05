@@ -57,10 +57,10 @@ const coefficients = reactive({
 });
 
 const atomCounts = computed(() => {
-  const r1 = coefficients.reactant1;
-  const r2 = coefficients.reactant2;
-  const p1 = coefficients.product1;
-  const p2 = coefficients.product2;
+  const r1 = coefficients.reactant1
+  const r2 = coefficients.reactant2
+  const p1 = coefficients.product1
+  const p2 = coefficients.product2
 
   return {
     reactants: {
@@ -82,8 +82,8 @@ const isBalanced = computed(() => {
     a.reactants.C === a.products.C &&
     a.reactants.H === a.products.H &&
     a.reactants.O === a.products.O
-  );
-});
+  )
+})
 
 // Simple H2 + O2 → H2O
 
@@ -92,13 +92,13 @@ const simple = reactive({
   reactantO2: 1,
   productCO2: 1,
   productH2O: 1
-});
+})
 
 const simpleCounts = computed(() => {
-  const sugar = simple.reactantC6H12O6;
-  const o2 = simple.reactantO2;
-  const co2 = simple.productCO2;
-  const h2o = simple.productH2O;
+  const sugar = simple.reactantC6H12O6
+  const o2 = simple.reactantO2
+  const co2 = simple.productCO2
+  const h2o = simple.productH2O
 
   return {
     reactants: {
@@ -131,8 +131,7 @@ h1 {
 }
 
 h1, h2, h3, h4, h5, h6, p, ul {
-  margin: 0.25rem;
-  margin-top: 1rem;
+  margin: 1rem 0.25rem 0.25rem;
 }
 
 .container {
@@ -166,8 +165,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .status {
-  padding: 1.5rem 2rem;
-  padding-bottom: 2rem;
+  padding: 1.5rem 2rem 2rem;
   border: 2px solid;
   border-radius: 1.5rem;
   display: flex;
@@ -184,11 +182,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
   border-color: #4caf50;
   color: #4caf50;
   background: rgba(76, 175, 80, 0.1);
-}
-
-.plus,
-.arrow {
-  font-weight: bold;
 }
 
 label {
